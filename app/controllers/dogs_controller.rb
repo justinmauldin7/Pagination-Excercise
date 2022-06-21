@@ -67,6 +67,10 @@ class DogsController < ApplicationController
 
   private
 
+  def dogs_per_page
+    return 5
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_dog
     @dog = Dog.find(params[:id])
