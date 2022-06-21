@@ -76,6 +76,7 @@ class DogsController < ApplicationController
     all_dogs_count = Dog.all.size
     page_count = get_page_count(all_dogs_count, dogs_per_page)
   def get_page_count(count, records_per_page)
+    (count / records_per_page.to_f).ceil
   end
 
   end
