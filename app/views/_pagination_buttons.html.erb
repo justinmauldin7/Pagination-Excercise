@@ -15,11 +15,16 @@
 </div>
 
 <script>
+  // This will disable the "previous-page-button" if your on the first page &
+  // there are no pages previously to go back too.
   if ( $(".previous-page-button").data('page') == 1 ) {
     $(".previous-page-button").attr('disabled', true)
   } else {
     $(".previous-page-button").attr('disabled', false)
   }
+
+  // This will disable the "next-page-button" if your on the last page &
+  // there are no more pages to go too.
   if ( $(".next-page-button").data('page-total') == (<%= page %>) ) {
     $(".next-page-button").attr('disabled', true)
   } else {
