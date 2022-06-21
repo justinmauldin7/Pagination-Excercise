@@ -15,4 +15,9 @@
 </div>
 
 <script>
+  if ( $(".previous-page-button").data('page') == 1 ) {
+    $(".previous-page-button").attr('disabled', true)
+  } else {
+    $(".previous-page-button").attr('disabled', false)
+  }
 </script>
