@@ -5,7 +5,7 @@ RSpec.describe DogsController, type: :controller do
     it 'displays recent dogs' do
       10.times { create(:dog) }
       get :index
-      expect(assigns(:dogs).size).to eq(2)
+      expect(assigns(:dogs).size).to eq(5)
     end
   end
 end
