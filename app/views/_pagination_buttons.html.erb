@@ -1,5 +1,5 @@
 <div class="pagination-buttons-container">
-  <%= button_to page_path, method: :get, params: { page: page - 1 } class: "previous-page-button" do %>
+  <%= button_to page_path, method: :get, params: { page: page - 1 }, :"data-page" => page, class: "previous-page-button" do %>
       <p>Previous</p>
   <% end %>
 
@@ -9,7 +9,7 @@
     <% end %>
   <% end %>
 
-  <%= button_to page_path, method: :get, params: { page: page + 1 }, class: "next-page-button" do %>
+  <%= button_to page_path, method: :get, params: { page: page + 1 }, :"data-page-total" =>  array_of_page_numbers.size, class: "next-page-button" do %>
     <p>Next</p>
   <% end %>
 </div>
