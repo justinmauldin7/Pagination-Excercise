@@ -75,6 +75,8 @@ class DogsController < ApplicationController
     return 5
   end
 
+  # This method sets all the instance variables that are needed when showing all
+  # the dogs paginated into smaller chunks/pages.
   def get_all_dogs_paginated(dogs_per_page)
     all_dogs_count = Dog.all.size
     page_count = get_page_count(all_dogs_count, dogs_per_page)
