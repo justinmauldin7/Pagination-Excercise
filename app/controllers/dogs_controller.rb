@@ -80,6 +80,9 @@ class DogsController < ApplicationController
     page_count = get_page_count(all_dogs_count, dogs_per_page)
 
     @number_of_dog_pages = create_number_of_pages_array(page_count)
+    # This query will get the number of dogs set by the
+    # "dogs_per_page" variable, and keeps loading that number of dogs
+    # on the page getting the next set of dogs each time.
     @dogs = Dog.all_dogs_paginated(dogs_per_page, @page)
   end
 
