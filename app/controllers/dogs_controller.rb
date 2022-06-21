@@ -4,7 +4,7 @@ class DogsController < ApplicationController
   # GET /dogs
   # GET /dogs.json
   def index
-    @dogs = Dog.all
+    get_all_dogs_paginated(dogs_per_page)
   end
 
   # GET /dogs/1
