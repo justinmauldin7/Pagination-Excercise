@@ -1,4 +1,6 @@
 class DogsController < ApplicationController
+  include PaginationHelper
+
   before_action :set_dog, only: [:show, :edit, :update, :destroy]
   # This before action ensures the @page variable is updated/calculating the right
   # page we are on, and is needed for the paginiation implementation to work correctly.
