@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'Home page', type: :feature do
   scenario 'New user lands on site' do
-    2.times { create(:dog) }
+    10.times { create(:dog) }
 
     visit '/'
 
