@@ -75,6 +75,8 @@ class DogsController < ApplicationController
   def get_all_dogs_paginated(dogs_per_page)
     all_dogs_count = Dog.all.size
     page_count = get_page_count(all_dogs_count, dogs_per_page)
+
+    @number_of_dog_pages = create_number_of_pages_array(page_count)
   # This method will return the number of pages there should be for each count of records.
   def get_page_count(count, records_per_page)
     (count / records_per_page.to_f).ceil
