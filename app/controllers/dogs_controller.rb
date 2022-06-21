@@ -74,6 +74,7 @@ class DogsController < ApplicationController
 
   def get_all_dogs_paginated(dogs_per_page)
     all_dogs_count = Dog.all.size
+    page_count = get_page_count(all_dogs_count, dogs_per_page)
   end
 
   # Use callbacks to share common setup or constraints between actions.
