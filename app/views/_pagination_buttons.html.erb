@@ -1,5 +1,7 @@
 <div class="pagination-buttons-container">
   <% array_of_page_numbers.each do |page_number| %>
-    <%= page_number %>
+    <%= button_to page_path, method: :get, params: { page: page_number }, class: "pagination-button" do %>
+      <%= page_number %>
+    <% end %>
   <% end %>
 </div>
