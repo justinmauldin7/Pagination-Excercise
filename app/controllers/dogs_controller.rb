@@ -83,6 +83,15 @@ class DogsController < ApplicationController
   end
 
   def create_number_of_pages_array(page_count)
+    number_of_pages_array = []
+    page_number = 1
+
+    while number_of_pages_array.size < page_count do
+      number_of_pages_array << page_number
+      page_number += 1
+    end
+
+    return number_of_pages_array
   end
 
   end
