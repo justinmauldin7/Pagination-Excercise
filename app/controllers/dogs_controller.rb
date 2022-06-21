@@ -67,6 +67,7 @@ class DogsController < ApplicationController
 
   private
 
+  # This is the number of dogs we want to display on each page of the dog's index page.
   def dogs_per_page
     return 5
   end
