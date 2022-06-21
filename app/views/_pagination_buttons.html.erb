@@ -20,4 +20,9 @@
   } else {
     $(".previous-page-button").attr('disabled', false)
   }
+  if ( $(".next-page-button").data('page-total') == (<%= page %>) ) {
+    $(".next-page-button").attr('disabled', true)
+  } else {
+    $(".next-page-button").attr('disabled', false)
+  }
 </script>
