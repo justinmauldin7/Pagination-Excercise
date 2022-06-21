@@ -82,6 +82,8 @@ class DogsController < ApplicationController
     (count / records_per_page.to_f).ceil
   end
 
+  # This method will take the count of pages and create an array of numbers for each page.
+  # (this array of numbers is needed to create the pagination page number buttons on views.)
   def create_number_of_pages_array(page_count)
     number_of_pages_array = []
     page_number = 1
