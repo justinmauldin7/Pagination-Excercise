@@ -102,6 +102,11 @@ class DogsController < ApplicationController
   end
 
   def set_page
+    if params[:page]
+      @page = params[:page].to_i
+    else
+      @page = 1
+    end
   end
 
   # Use callbacks to share common setup or constraints between actions.
