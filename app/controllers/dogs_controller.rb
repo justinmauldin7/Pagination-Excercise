@@ -101,6 +101,9 @@ class DogsController < ApplicationController
     return number_of_pages_array
   end
 
+  # This method will always set/keep track of what page number you're on when your
+  # clicking the pagination page number buttons.
+  # (This is needed to ensure we get the right offset in our ActiveRecord queries.)
   def set_page
     if params[:page]
       @page = params[:page].to_i
