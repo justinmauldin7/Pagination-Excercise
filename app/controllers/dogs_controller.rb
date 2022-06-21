@@ -82,6 +82,9 @@ class DogsController < ApplicationController
     (count / records_per_page.to_f).ceil
   end
 
+  def create_number_of_pages_array(page_count)
+  end
+
   end
 
   # Use callbacks to share common setup or constraints between actions.
