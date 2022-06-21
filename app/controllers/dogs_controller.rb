@@ -77,6 +77,8 @@ class DogsController < ApplicationController
     page_count = get_page_count(all_dogs_count, dogs_per_page)
 
     @number_of_dog_pages = create_number_of_pages_array(page_count)
+  end
+
   # This method will return the number of pages there should be for each count of records.
   def get_page_count(count, records_per_page)
     (count / records_per_page.to_f).ceil
@@ -96,6 +98,7 @@ class DogsController < ApplicationController
     return number_of_pages_array
   end
 
+  def set_page
   end
 
   # Use callbacks to share common setup or constraints between actions.
