@@ -1,1 +1,9 @@
+<% if @number_of_dog_pages.size > 1 %>
+  <%= render partial: './pagination_buttons', locals: { page_path: dogs_path, page: @page, array_of_page_numbers: @number_of_dog_pages } %>
+<% end %>
+
 <%= render partial: 'thumbnail', collection: @dogs, as: :dog %>
+
+<% if @number_of_dog_pages.size > 1 %>
+  <%= render partial: './pagination_buttons', locals: { page_path: dogs_path, page: @page, array_of_page_numbers: @number_of_dog_pages } %>
+<% end %>
